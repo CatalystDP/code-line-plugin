@@ -3,11 +3,12 @@ const lineName='__LINE__';
 module.exports=function(content){
     let lines=[];
     let ast=acorn.parse(content,{
-        ecmaVersion:8,
+        ecmaVersion:6,
         ranges:true,
         locations:true,
         onToken:function(token){
-            if(token.value===lineName){
+            if(token.value==lineName){
+                console.log(token);
                 if(token.loc){
                     let line=token.loc.start.line;//获取行号
                     let start=token.start,
@@ -18,7 +19,6 @@ module.exports=function(content){
             }
         } 
     });
-    console.log(lines);
     let i=0;
     content=content.replace(new RegExp(lineName,'g'),function(str){
         let s=lines[i];
