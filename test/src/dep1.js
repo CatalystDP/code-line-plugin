@@ -1,0 +1,1 @@
+console.log('log on '+__LINE__+__FILE__);

@@ -1,0 +1,24 @@
+{
+  "name": "code-line-plugin",
+  "version": "1.0.3",
+  "description": "replace __LINE__ __FILE__ in code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd ./test && node ../node_modules/webpack/bin/webpack.js",
+    "debug": "cd ./test && node --debug-brk ../node_modules/webpack/bin/webpack.js"
+  },
+  "author": "CatalystDP",
+  "license": "MIT",
+  "dependencies": {
+    "acorn": "^5.2.1",
+    "semver": "^5.4.1"
+  },
+  "peerDependencies": {
+    "webpack": "1.x||2.x||3.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
+}
