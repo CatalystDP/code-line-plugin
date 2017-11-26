@@ -3,7 +3,6 @@ const NullFactory = require('webpack/lib/NullFactory');
 const semver = require('semver');
 const path = require('path');
 const version = require('webpack/package.json').version;
-const sourceMap = require('source-map');
 function toConstantDependency(value) {
     return function constDependency(expr) {
         var dep = new ConstDependency(value, expr.range);

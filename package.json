@@ -1,6 +1,6 @@
 {
   "name": "code-line-plugin",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "replace __LINE__ __FILE__ in code",
   "main": "index.js",
   "scripts": {
@@ -11,14 +11,7 @@
   "author": "CatalystDP",
   "license": "MIT",
   "dependencies": {
-    "acorn": "^5.2.1",
-    "acorn-es7": "^0.1.0",
-    "acorn-jsx": "^4.1.0",
-    "acorn-object-rest-spread": "^1.1.0",
-    "acorn-static-class-property-initializer": "^1.0.0",
-    "acorn5-object-spread": "^4.0.0",
-    "semver": "^5.4.1",
-    "source-map": "^0.6.1"
+    "semver": "^5.4.1"
   },
   "peerDependencies": {
     "webpack": "*"
