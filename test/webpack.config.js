@@ -46,7 +46,8 @@ let _config = {
         path: config.DISTPATH,
         publicPath: '../dist/',
         filename: 'js/[name].js',
-        chunkFilename: 'js/[name].js'
+        chunkFilename: 'js/[name].js',
+        devtoolLineToLine:true
         // sourceMapFilename:'http://localhost:8080/demo/dist/js/[name].map'
     },
     // watch:true,
@@ -64,15 +65,9 @@ let _config = {
                         presets:['env']
                     }
                 }
-            },
-            {
-                test:/\.(js|jsx)$/,
-                exclude:/(node_modules)/,
-                use:{
-                    loader:'../../loader/index.js'
-                }
             }
         ]
     }
 };
+_config.devtool='source-map';
 module.exports = _config;

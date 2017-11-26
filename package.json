@@ -6,16 +6,22 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "cd ./test && node ../node_modules/webpack/bin/webpack.js",
-    "debug": "cd ./test && node --debug-brk ../node_modules/webpack/bin/webpack.js"
+    "debug": "cd ./test && node --debug-brk ./task.js"
   },
   "author": "CatalystDP",
   "license": "MIT",
   "dependencies": {
     "acorn": "^5.2.1",
-    "semver": "^5.4.1"
+    "acorn-es7": "^0.1.0",
+    "acorn-jsx": "^4.1.0",
+    "acorn-object-rest-spread": "^1.1.0",
+    "acorn-static-class-property-initializer": "^1.0.0",
+    "acorn5-object-spread": "^4.0.0",
+    "semver": "^5.4.1",
+    "source-map": "^0.6.1"
   },
   "peerDependencies": {
-    "webpack": "1.x||2.x||3.x"
+    "webpack": "*"
   },
   "repository": {
     "type": "git",
