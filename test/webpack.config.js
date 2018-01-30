@@ -54,28 +54,28 @@ let _config = {
         new CodeLinePlugin()
     ],
     module: {
-        // rules: [
-        //     {
-        //         test: /\.(js|jsx)$/,
-        //         exclude: /(node_modules)/,
-        //         use: {
-        //             loader: 'babel-loader',
-        //             options: {
-        //                 presets: ['env']
-        //             }
-        //         }
-        //     }
-        // ],
-        loaders: [
+        rules: [
             {
                 test: /\.(js|jsx)$/,
                 exclude: /(node_modules)/,
-                loader: 'babel',
-                query: {
-                    presets: ['es2015']
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['env']
+                    }
                 }
             }
-        ]
+        ],
+        // loaders: [
+        //     {
+        //         test: /\.(js|jsx)$/,
+        //         exclude: /(node_modules)/,
+        //         loader: 'babel',
+        //         query: {
+        //             presets: ['es2015']
+        //         }
+        //     }
+        // ]
     }
 };
 _config.devtool = 'source-map';

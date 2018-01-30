@@ -51,12 +51,17 @@ class CodeLinePlugin {
                         }
                         reg.lastIndex = 0;
                     });
-                    originLines.forEach((lineNum, index) => {
-                        toConstantDependency(JSON.stringify(lineNum)).call({
-                            state: {
-                                current: module
-                            }
-                        }, module._linesCollection[index]);
+                    module._linesCollection.forEach((expr,index)=>{
+                        try{
+                            toConstantDependency(JSON.stringify(originLines[index]||'')).call({
+                                state: {
+                                    current: module
+                                }
+                            }, expr);
+                        }catch(e){
+                            console.log(chalk.yellow(`[warn] to constantDependency fail\nfailed module: ${module.resource}
+                            `));
+                        }                                 
                     });
                 }
                 delete module._linesCollection;
